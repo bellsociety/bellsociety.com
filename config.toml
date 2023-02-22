@@ -73,6 +73,12 @@ theme = "LoveIt"
     url = "/2022/"
     title = ""
     weight = 1
+  [[menu.main]]
+    identifier = "2023"
+    name = "2023"
+    url = "/2023/"
+    title = ""
+    weight = 1
             
 # Markup related configuration in Hugo
 [markup]
