@@ -19,6 +19,36 @@ Hugo will hot-reload changes you make to the site, so no need to restart the pro
 If you do not already have Hugo installed, you can find installation instructions [here](https://gohugo.io/getting-started/installing/). On macOS, you can just run `brew install hugo`.
 
 
+## Adding people
+
+If you'd like to add new people to the website, follow the steps below:
+
+Edit the `config.toml` file to add an entry as follows, replacing `$YEAR`
+with your class year.
+
+```toml
+  [[menu.main]]
+    identifier = "$YEAR"
+    name = "$YEAR"
+    url = "$YEAR"
+    title = ""
+    weight = 1
+```
+
+Navigate to the `webscrape/` directory
+
+`cd webscrape`
+
+Run the import data script after changing the `CLASS_YEAR` variable in the file
+
+`python3 import_data.py`
+
+This script does most of the work for you -- it creates the relevant markdown
+files with everyone's bios. Images are trickier, however. See the comments in
+`import_data.py` for more information. You'll likely need to manually add some
+folks' images into the repository.
+
+
 ### Contributors
 
-Right now we've got Ben Demers, Campbell Phalen, Danny Bessinov, and Praneeth Alla working on the site. Reach out to us if you want to contribute!
+Ben Demers, Campbell Phalen, Danny Bessinov, Praneeth Alla, and Rohan Gupta.
