@@ -34,14 +34,18 @@ with your class year.
 
 Navigate to the `webscrape/` directory
 
-`cd webscrape`
+    cd webscrape
 
 Run the import data script after changing the `CLASS_YEAR` variable in the file
+and setting the `PATH_TO_CSV` to point to the path to your downloaded Excel
+sheet (in `.csv` format).
 
-`python3 import_data.py`
+    python3 import_data.py
 
 This script does most of the work for you -- it creates the relevant markdown
-files with everyone's bios. Images are trickier, however. See the comments in
+files with everyone's bios.
+
+Images, however, don't usually work as smoothly. See the comments in
 `import_data.py` for more information. You'll likely need to manually add some
 folks' images into the repository.
 
