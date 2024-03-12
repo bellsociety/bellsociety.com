@@ -53,3 +53,9 @@ folks' images into the repository.
 ### Contributors
 
 Ben Demers, Campbell Phalen, Danny Bessinov, Praneeth Alla, and Rohan Gupta.
+
+
+### Updating Production
+
+You can update the production website by commiting to master. The CI job will
+deploy to github-pages, which then points to the Cloudflare run domain `bellsociety.com`
