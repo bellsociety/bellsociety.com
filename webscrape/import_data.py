@@ -5,7 +5,7 @@ import os
 
 
 # Change this before running the script
-CLASS_YEAR = 2024
+CLASS_YEAR = 2025
 PATH_TO_CSV = f"./data/{CLASS_YEAR}.csv"
 
 def download_image_attempt(image_url, class_name, slug):
@@ -55,7 +55,7 @@ with open(PATH_TO_CSV) as file_in:
         with open(f"../content/{CLASS_YEAR}/{code}.md", "w") as file_out:
             file_out.write("---\n")
             file_out.write(f"name: \"{row[0]}\"\n")
-            file_out.write(f"class: \"2024\"\n")
+            file_out.write(f"class: \"{CLASS_YEAR}\"\n")
             file_out.write(f"slug: \"{code}\"\n")
             image_url = row[-2]
             download_image_attempt(image_url, CLASS_YEAR, code)
