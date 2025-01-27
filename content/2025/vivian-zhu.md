@@ -6,6 +6,6 @@ image: "https://media.licdn.com/dms/image/v2/C5603AQFrTgEHli6EBg/profile-display
 email: "mailto:vajzhu@gmail.com"
 github: "vivianzhu88"
 twitter: "vivzhuu"
-linkedin: "vivianzhu88"
+linkedin: "https://www.linkedin.com/in/vivianzhu88/"
 facebook: "Vivian Zhu "
 ---

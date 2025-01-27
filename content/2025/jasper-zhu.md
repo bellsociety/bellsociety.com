@@ -6,6 +6,7 @@ image: "https://media.licdn.com/dms/image/v2/D4E03AQGKc5Ilw48c_Q/profile-display
 email: "mailto:Jasperzhu2002@gmail.com"
 github: "@Jasperzhu2002"
 twitter: "@Jasperzhu2002"
-linkedin: "@Jasperzhu2002"
+linkedin: "https://www.linkedin.com/in/jasper-zhu/"
 facebook: "@Jasperzhu2002"
 ---
+Certainly!
