@@ -7,10 +7,16 @@
   max-width: 100ch;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
 .bio-bio > * {
   text-align: center;
   max-width: 80ch;
+}
+
+.bio > p {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .bio-img {
@@ -59,5 +65,5 @@
 {{ if .Params.boardPosition }}
 <div class="board" style="font-weight:bold">{{ .Params.boardPosition }}</div>
 {{ end }}
-<div class="bio" style="width: 200px">{{ .Content }}</div>
+<div class="bio" style="width: 200px; margin-bottom: 0; margin-top: 0">{{ .Content }}</div>
 </div>
