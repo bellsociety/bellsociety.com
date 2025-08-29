@@ -5,7 +5,7 @@ import os
 
 
 # Change this before running the script
-CLASS_YEAR = 2025
+CLASS_YEAR = 2026
 PATH_TO_CSV = f"./data/{CLASS_YEAR}.csv"
 
 def download_image_attempt(image_url, class_name, slug):
