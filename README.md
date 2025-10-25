@@ -3,18 +3,23 @@
 ### Startup Guide
 
 To start developing locally we need to run the following commands. First, initialize and download the `LoveIt` submodule that we use at the theme for this Hugo site:
+
 ```
 git submodule init
 git submodule update
 ```
+
 Once you have the theme installed, you can run the site in development mode with Hugo:
+
 ```
 hugo serve -D
 ```
+
 Hugo will hot-reload changes you make to the site, so no need to restart the process as you make changes (just reload the page).
 
 If you do not already have Hugo installed, you can find installation instructions [here](https://gohugo.io/getting-started/installing/). On macOS, you can just run `brew install hugo`.
 
+**Note:** This project requires Hugo version 0.120.4
 
 ## Adding people
 
@@ -49,11 +54,9 @@ Images, however, don't usually work as smoothly. See the comments in
 `import_data.py` for more information. You'll likely need to manually add some
 folks' images into the repository.
 
-
 ### Contributors
 
 Ben Demers, Campbell Phalen, Danny Bessinov, Praneeth Alla, and Rohan Gupta.
-
 
 ### Updating Production
 
