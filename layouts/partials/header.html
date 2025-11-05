@@ -30,25 +30,57 @@
         </div>
         <div class="menu">
             <div class="menu-inner">
-                <!-- hack to get honorary to show up on the left -->
-                {{- range where .Site.Menus.main ".Weight" 0 -}}
-                    {{- $url := .URL | relLangURL -}}
-                    {{- with .Page -}}
-                        {{- $url = .RelPermalink -}}
-                    {{- end -}}
-                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
-                        {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
-                    </a>
-                {{- end -}}
-                {{- range where .Site.Menus.main ".Weight" 1 -}}
-                {{- $url := .URL | relLangURL -}}
-                {{- with .Page -}}
-                    {{- $url = .RelPermalink -}}
-                {{- end -}}
-                <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
-                    {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
-                </a>
-            {{- end -}}
+                <details class="menu-dropdown">
+                    <summary class="menu-item" role="button" aria-haspopup="true">
+                        Classes <i class="fas fa-chevron-down fa-fw"></i>
+                    </summary>
+                    <div class="dropdown-menu">
+                        <!-- hack to get honorary to show up on the top of the dropdown -->
+                        {{- range where .Site.Menus.main ".Weight" 0 -}}
+                            {{- $url := .URL | relLangURL -}}
+                            {{- with .Page -}}
+                                {{- $url = .RelPermalink -}}
+                            {{- end -}}
+                            <a class="dropdown-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                                {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
+                            </a>
+                        {{- end -}}
+
+                        {{- /* Then include the original Weight==1 items */ -}}
+                        {{- range where .Site.Menus.main ".Weight" 1 -}}
+                            {{- $url := .URL | relLangURL -}}
+                            {{- with .Page -}}
+                                {{- $url = .RelPermalink -}}
+                            {{- end -}}
+                            <a class="dropdown-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                                {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
+                            </a>
+                        {{- end -}}
+                    </div>
+                </details>
+                <style>
+                .menu-dropdown { display: inline-block }
+                /* Ensure parent containers don't clip the dropdown */
+                .menu-dropdown summary { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; user-select: none; }
+                .menu-dropdown summary::-webkit-details-marker { display: none; }
+                .menu-dropdown .dropdown-menu {
+                    display: none;
+                    position: absolute;
+                    top: calc(100% + 6px);
+                    right: 6px;
+                    left: auto;
+                    background: var(--background, #fff);
+                    min-width: 200px;
+                    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+                    border-radius: 4px;
+                    padding: 6px 0;
+                    z-index: 100000;
+                }
+                .menu-dropdown[open] .dropdown-menu { display: block; }
+                .dropdown-item { display: block; padding: 1rem; color: inherit; text-decoration: none; line-height: 1rem; }
+                .dropdown-item:hover { background: rgba(0,0,0,0.04); }
+                .dropdown-item.active { font-weight: 600; }
+                </style>
                 {{- if .Site.Menus.main -}}
                     <span class="menu-item delimiter"></span>
                 {{- end -}}
