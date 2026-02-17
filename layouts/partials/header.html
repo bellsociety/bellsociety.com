@@ -30,6 +30,7 @@
         </div>
         <div class="menu">
             <div class="menu-inner">
+                <!-- hack to change the menu to a dropdown instead -->
                 <details class="menu-dropdown">
                     <summary class="menu-item" role="button" aria-haspopup="true">
                         Classes <i class="fas fa-chevron-down fa-fw"></i>
@@ -60,7 +61,6 @@
                 </details>
                 <style>
                 .menu-dropdown { display: inline-block }
-                /* Ensure parent containers don't clip the dropdown */
                 .menu-dropdown summary { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; user-select: none; }
                 .menu-dropdown summary::-webkit-details-marker { display: none; }
                 .menu-dropdown .dropdown-menu {
