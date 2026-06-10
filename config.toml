@@ -97,6 +97,12 @@ name = "2026"
 url = "/2026/"
 title = ""
 weight = 1
+[[menu.main]]
+identifier = "2027"
+name = "2027"
+url = "/2027/"
+title = ""
+weight = 1
 
 # Markup related configuration in Hugo
 [markup]

@@ -5,7 +5,7 @@ import os
 
 
 # Change this before running the script
-CLASS_YEAR = 2026
+CLASS_YEAR = 2027
 PATH_TO_CSV = f"./data/{CLASS_YEAR}.csv"
 
 def download_image_attempt(image_url, class_name, slug):
@@ -50,9 +50,11 @@ Export your year's excel sheet as a .csv file and run this script on it
 with open(PATH_TO_CSV) as file_in:
     next(file_in, None)
     csv_reader = csv.reader(file_in, delimiter=',')
+    content_dir = f"../content/{CLASS_YEAR}"
+    os.makedirs(content_dir, exist_ok=True)
     for row in csv_reader:
         code = "-".join(row[0].split(" ")).lower()
-        with open(f"../content/{CLASS_YEAR}/{code}.md", "w") as file_out:
+        with open(f"{content_dir}/{code}.md", "w") as file_out:
             file_out.write("---\n")
             file_out.write(f"name: \"{row[0]}\"\n")
             file_out.write(f"class: \"{CLASS_YEAR}\"\n")
