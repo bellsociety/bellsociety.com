@@ -8,4 +8,4 @@ github: "https://github.com/syddiaz-nyc"
 linkedin: "https://www.linkedin.com/in/diaz-sydney/"
 facebook: "https://facebook.com/diaz.sydney"
 ---
-main character
+endless lore
