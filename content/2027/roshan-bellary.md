@@ -2,6 +2,8 @@
 name: "Roshan Bellary"
 class: "2027"
 slug: "roshan-bellary"
+boardPosition: "Treasurer"
+website: "https://roshbell.com/"
 image: "https://drive.google.com/file/d/1eGNGSVzrD4DIiNz3MQb6zH-sS46nyk2n/view?usp=sharing"
 email: "mailto:roshan.bellary@gmail.com"
 github: "https://github.com/roshanbellary"

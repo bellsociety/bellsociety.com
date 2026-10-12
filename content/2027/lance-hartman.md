@@ -2,6 +2,8 @@
 name: "Lance Hartman"
 class: "2027"
 slug: "lance-hartman"
+boardPosition: "Rush Chair"
+website: "https://www.lancehartman.info/"
 image: "https://drive.google.com/file/d/1KBhTkbDmACKfonGnSDluUoKGc_j-q6zH/view?usp=sharing"
 email: "mailto:lanceforresth@gmail.com"
 github: "https://github.com/lanceguy5"

@@ -40,6 +40,10 @@
 
   <div class="links">
 
+    {{ if .Params.website }}
+    <a href="{{ .Params.website }}" title="Website" aria-label="Website" target="_blank" rel="noopener noreferrer me"><i class="fas fa-globe fa-fw" aria-hidden="true"></i></a>
+    {{ end }}
+
     {{ if .Params.linkedin }}
     <a href="{{ .Params.linkedin }}" title="linkedin" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a>
     {{ end }}

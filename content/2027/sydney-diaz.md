@@ -2,6 +2,7 @@
 name: "Sydney Diaz"
 class: "2027"
 slug: "sydney-diaz"
+boardPosition: "President"
 image: "https://drive.google.com/file/d/1vVPo43ebrVEsQA_cr26Yd50y6IGkOGl3/view?usp=sharing"
 email: "mailto:syddiaz@gmail.com"
 github: "https://github.com/syddiaz-nyc"

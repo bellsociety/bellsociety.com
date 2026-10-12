@@ -2,6 +2,7 @@
 name: "Max de Castro"
 class: "2027"
 slug: "max-de-castro"
+website: "https://maxdecastro.com"
 image: "https://drive.google.com/file/d/123UbnBcjG_lcRrMYV4lOse9Sa21iIqNA/view?usp=sharing"
 email: "mailto:maxricodecastro@gmail.com"
 github: "https://github.com/maxricodecastro"

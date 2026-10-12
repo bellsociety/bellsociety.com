@@ -2,6 +2,7 @@
 name: "Ryka Chandra"
 class: "2027"
 slug: "ryka-chandra"
+boardPosition: "Social Chair"
 image: "https://drive.google.com/file/d/1GBW9aQEf6w7VHTc5csHKSvvrq_JVE3jy/view?usp=sharing"
 email: "mailto:rykachandra@gmail.com"
 github: "https://github.com/ryka-chandra"

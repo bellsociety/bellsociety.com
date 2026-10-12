@@ -1,4 +1,5 @@
 import csv
+import json
 import pathlib
 import requests
 import os
@@ -63,6 +64,16 @@ with open(PATH_TO_CSV) as file_in:
             download_image_attempt(image_url, CLASS_YEAR, code)
             file_out.write(f"image: \"{image_url}\"\n")
             file_out.write(f"email: \"mailto:{row[4]}\"\n")
+            website = row[3].strip()
+            if website:
+                if not website.lower().startswith(("https://", "http://")):
+                    website = f"https://{website}"
+                file_out.write(f"website: {json.dumps(website)}\n")
+            board_position = row[10].strip() if len(row) > 10 else ""
+            if board_position in ("Alumni", "Rush", "Social"):
+                board_position += " Chair"
+            if board_position:
+                file_out.write(f"boardPosition: {json.dumps(board_position)}\n")
             if row[7] != "":
                 file_out.write(f"github: \"{row[7]}\"\n")
             if row[5]  !="":

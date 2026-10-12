@@ -2,6 +2,8 @@
 name: "Nishat Olayiwola"
 class: "2027"
 slug: "nishat-olayiwola"
+boardPosition: "Rush Chair"
+website: "https://nishatolay.com"
 image: "/img/2027/nishat-olayiwola.jpg"
 email: "mailto:nishatolayiwola@gmail.com"
 github: "https://github.com/nishatolay"
